@@ -13,7 +13,7 @@ node {
        sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
    stage('SonarQube analysis') {
-       sh '''mvn sonar:sonar \
+       sh ''''${mvnHome}/bin/mvn' sonar:sonar \
 		  -Dsonar.projectKey=srinivasbv22_springmvcworking \
 		  -Dsonar.organization=srinivasbv22-github \
 		  -Dsonar.host.url=https://sonarcloud.io \
